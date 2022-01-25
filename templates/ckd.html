@@ -8,31 +8,38 @@ div {text-align: center;
 </style>
   <meta charset="UTF-8">
   <title>CHRONIC KIDNEY DISEASE</title>
-
+  
 </head>
 
 
-    <body  text="black">
+    <body style="background-color:azure;" text="black">
+     
+      
+   </body>
     
 
     <div class="login">
-        <center><h1>CHRONIC KIDNEY DISEASE</h1></center>
-
+        <center><h1><mark style="color: whitesmoke ; background-color:darkslategrey ">CHRONIC KIDNEY DISEASE ANALYSIS</mark></h1></center>
+        <hr width="800px;" color="navy" size="3">
+       
         <!-- Main Input For Receiving Query to our ML -->
         <form action="{{ url_for('predict')}}"method="post">
-    <h1>Please enter the following details</h1>
+    <h1><mark style="color: black ; background-color:azure">Please enter the following details</mark></h1>
+    <p style = "font-family:georgia,garamond,serif;font-size:16px;font-style:italic;">
+        
+    
 
 
     </style></head>
 
 
-    <label for="red_blood_cells">red_blood_cells:</label>
+    <label for="red_blood_cells">Red Blood Cells:</label>
             <input type="number" min="0" max="1000"   name="Red Blood Cells" placeholder="Red Blood Cells	" required="required" /><br>
             
             </select> <br>
         
 
-    <br><label for="pus_cell">pus_cell:</label>
+    <br><label for="pus_cell">Pus Cell:</label>
             <select id="pus_cell" name="pus_cell">
                 <option value=0>notpresent</option>
                 <option value=1>present</option>
@@ -40,16 +47,15 @@ div {text-align: center;
             </select><br>
             
 
-    <br>   <label>Age:</label>    
-        <input type="number" min="18" max="89"   name="Age" placeholder="Age	" required="required" /><br>
+    
 
-    <br> <label for="diabetesmellitus">diabetesmellitus:</label>
+    <br> <label for="diabetesmellitus">Diabetesmellitus:</label>
             <select id="Diabetesmellitus" name="Diabetesmellitus">
                 <option value=1>yes</option>
                 <option value=0>no</option>
             
             </select> <br>
-    <br><label for="pedal_edema">pedal_edema:</label>
+    <br><label for="pedal_edema">Pedal Edema:</label>
         <select id="pedal_edema" name="pedal_edema">
         <option value=0>no</option>
         <option value=1>yes</option>
@@ -57,7 +63,7 @@ div {text-align: center;
 
 
             </select> <br>
-    <br> <label for="anemia">anemia:</label>
+    <br> <label for="anemia">Anemia:</label>
             <select id="anemia" name="anemia">
                 <option value=0>no</option>
                 <option value=1>yes</option>
@@ -65,7 +71,7 @@ div {text-align: center;
             
             </select><br>
 
-    <br> <label for="coronary_artery_disease">coronary_artery_disease</label>
+    <br> <label for="coronary_artery_disease">Coronary Artery Disease</label>
             <select id="coronary_artery_disease" name="coronary_artery_disease">
                 <option value=0>no</option>
                 <option value=1>yes</option>
@@ -74,15 +80,17 @@ div {text-align: center;
 
             
     <br> 
-    <label for="blood_glucose_random">blood_glucose_random:</label>
+    <label for="blood_glucose_random">Blood Glucose Random:</label>
         <input type="number" min="0" max="1000"   name="blood_glucose_random" placeholder="blood_glucose_random	" required="required" /><br>
                 
             </select><br>
 
             
     <br> 
-    <label for="blood_urea">blood_urea:</label>
+    <label for="blood_urea">Blood Urea:</label>
         <input type="blood_urea" min="0" max="1000"   name="blood_urea" placeholder="blood_urea	" required="required" /><br>
+
+    </p>
                 
 
 
@@ -96,7 +104,7 @@ div {text-align: center;
 
     <br>
 
-    {{ prediction_text }}
+    <mark style="color: black ;font-size:25px; background-color:lightsalmon ">{{ prediction_text }}</mark>
 
 
     <br>
